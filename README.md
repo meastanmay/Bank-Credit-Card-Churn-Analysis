@@ -68,13 +68,6 @@ using the AdaBoost model, and many other models have been utilized.
 generalized if we supplied more data to the training model.
 4. We can use more sophisticated ensembling techniques by combining two or more base classifiers.
 
-### Author’s Conrtribution
-  • Tanmay Agarwal: Exploratory Data Analysis, Data Preparation, Modelling, Conclusion and Future Scope.
-  • Niveditha Channapatna Raju: Literature survey, Exploratory Data Analysis, Plagarism Check and Report
-  Writing on Latex.
-  • Sajid Hussain: Research Publications for understanding different models which are used in this project, Evaluation
-  criteria, Report Drafts.
-
 ### References
 [1] Gustafsson, A., Johnson, M.D., Roos, I.: The effects of customer satisfaction, relationship commitment dimensions,
 and triggers on customer retention. Journal of Marketing 69(4), 210–218 (2005)
