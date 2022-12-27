@@ -25,6 +25,18 @@ between attributes, we perform exploratory data analysis. The dataset was then d
 standardization came next. To evaluate the performance of the models, Logistic Regression, Decision Tree, Random
 Forest, and Light GBM are employed.
 
+### Methods
+  #### Logistic regression
+  The method of modeling the likelihood of a discrete result given an input variable is known as logistic regression. The
+  most common algorithm models binary outcome by classifying a sample to the class if the estimated probability is
+  greater than 50%. The probability estimated by the model in vector form is given by:
+  
+  p = hθx = σxTθ
+  
+  Interestingly, because it uses a non-linear log transformation of the linear regression, logistic regression can handle
+  non-linear correlations between the dependent and independent variables. A Logistic function or a logistic curve is a
+  common s-shaped curve (sigmoid curve)
+
 ### Conclusion
 From the above results we could conclude that:
 1. Light GBM model trained on the under-sampled training data set gives the best performance.
