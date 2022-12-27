@@ -23,15 +23,20 @@ unreliable and has relatively low interpretability. In this study, we use Kaggle
 between attributes, we perform exploratory data analysis. The dataset was then divided into training and testing, and
 standardization came next. To evaluate the performance of the models, Logistic Regression, Decision Tree, Random
 Forest, and Light GBM are employed.
-2 Method
-2.1 Logistic regression
+
+### 2 Method
+
+####2.1 Logistic regression
 The method of modeling the likelihood of a discrete result given an input variable is known as logistic regression. The
 most common algorithm models binary outcome by classifying a sample to the class if the estimated probability is
 greater than 50%. The probability estimated by the model in vector form is given by:
+
 p = hθx = σxTθ
+
 Interestingly, because it uses a non-linear log transformation of the linear regression, logistic regression can handle
 non-linear correlations between the dependent and independent variables. A Logistic function or a logistic curve is a
 common s-shaped curve (sigmoid curve) with the equation
+
 f(x) =
 L
 1 + e−k(x−x0)
@@ -42,7 +47,9 @@ L = The supremum of the values of the function,
 k = The logistic growth rate or steepness of the curve.
 1
 Figure 1: Standard logistic function where L = 0, k = 1, x0 = 0
-2.2 Decision tree
+
+####2.2 Decision tree
+
 Decision trees classify data by utilizing a tree structure that is built by segmenting the dataset into several subsets.
 The outcome is a tree containing leaf nodes and decision nodes. It has a tree-based structure to show the predictions
 that result from a series of feature-based splits which starts with a root node and ends with a decision made by leaves.
