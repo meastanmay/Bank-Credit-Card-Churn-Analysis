@@ -1,5 +1,7 @@
 # Bank-Credit-Card-Churn-Analysis
-Predicting the customers leaving the credit card services provided by a bank and finding the features which are contributing for their Attrition
+
+## Table of contents:
+
 With the advance of digital technology, people are increasingly resorting to credit cards online for their transactions.
 In this competitive market space, it is paramount for banks to retain customers to maintain the profit
 margin. We aim to predict credit card customer churn using machine learning models to deal with customer churn
