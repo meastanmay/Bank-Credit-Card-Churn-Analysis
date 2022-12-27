@@ -36,6 +36,35 @@ Forest, and Light GBM are employed.
   Interestingly, because it uses a non-linear log transformation of the linear regression, logistic regression can handle
   non-linear correlations between the dependent and independent variables. A Logistic function or a logistic curve is a
   common s-shaped curve (sigmoid curve)
+  
+  #### Decision Tree
+  Decision trees classify data by utilizing a tree structure that is built by segmenting the dataset into several subsets.
+  The outcome is a tree containing leaf nodes and decision nodes. It has a tree-based structure to show the predictions
+  that result from a series of feature-based splits which starts with a root node and ends with a decision made by leaves.
+  Some terms used in the Decision tree:
+    • Root Node: It is the starting point of the decision tree. The population starts to get split from this particular
+    node based on the features.
+    • Decision Node: The nodes we get after splitting the root node.
+    • Leaf Nodes: The last node in the decision tree after which no further splitting of the node is possible.
+    • Sub-tree: A part of the decision tree.
+    • Pruning: Process of cutting down some nodes to stop overfitting.
+  The Decision Tree Algorithm also tries to deal with the uncertainty in the dataset using ENTROPY. A Pure sub-split
+  is the split in which the entropy of the subset becomes zero indicating that features are perfectly separated.
+  
+  <b>Formula of Entropy:</b>
+  
+  −p+ve.log(p+ve) − p−ve.log(pve)
+  
+  Entropy reveals a node’s impurity, but information gain, which chooses the feature for the root node, can be used to
+  assess how an impurity changed after splitting.
+  Information Gain = E(Parent) - E(Parent|Decisive feature)
+  E(Parent)−→The entropy of the Parent Node.
+  E(Parent|Decisive Feature)−→The weighted average of Entropies of each decisive node split out of a particular feature.
+  The feature which has the largest information gain after the split is picked for root node
+  In real-world data sets, there are a lot more features and it takes a lot of time to process the Decision tree algorithm
+  as the tree gets more and more complicated. One of the drawbacks of the Decision tree algorithm is, this algorithm
+  won’t stop until the entropy reaches 0 and tries to fit to each and every data point, even the noise in the data set.
+  Thus, it leads to overfitting of the model on the training data set.
 
 ### Conclusion
 From the above results we could conclude that:
