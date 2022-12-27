@@ -51,7 +51,7 @@ Forest, and Light GBM are employed.
   The Decision Tree Algorithm also tries to deal with the uncertainty in the dataset using ENTROPY. A Pure sub-split
   is the split in which the entropy of the subset becomes zero indicating that features are perfectly separated.
   
-  <b>Formula of Entropy:</b>
+  <center><b>Formula of Entropy:</b></center>
   
   −p+ve.log(p+ve) − p−ve.log(pve)
   
