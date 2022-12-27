@@ -26,6 +26,7 @@ standardization came next. To evaluate the performance of the models, Logistic R
 Forest, and Light GBM are employed.
 
 ### Methods
+
   #### Logistic regression
   The method of modeling the likelihood of a discrete result given an input variable is known as logistic regression. The
   most common algorithm models binary outcome by classifying a sample to the class if the estimated probability is
@@ -51,7 +52,7 @@ Forest, and Light GBM are employed.
   The Decision Tree Algorithm also tries to deal with the uncertainty in the dataset using ENTROPY. A Pure sub-split
   is the split in which the entropy of the subset becomes zero indicating that features are perfectly separated.
   
-  <center><b>Formula of Entropy:</b></center>
+  <b>Formula of Entropy:</b>
   
   −p+ve.log(p+ve) − p−ve.log(pve)
   
@@ -65,37 +66,33 @@ Forest, and Light GBM are employed.
   as the tree gets more and more complicated. One of the drawbacks of the Decision tree algorithm is, this algorithm
   won’t stop until the entropy reaches 0 and tries to fit to each and every data point, even the noise in the data set.
   Thus, it leads to overfitting of the model on the training data set.
+  
+  #### Random Forest
+  A Random Forest is a bagging ensemble learning technique which incorporates two fundamental ideas that give it the
+  term random rather than just average the predictions of trees:
+    • A Random sampling of training observations:
+    In a random forest, each tree gains knowledge from a random selection of the training observations. As a result
+    of the samples being drawn using replacement, or bootstrapping, certain samples will be utilized more than once
+    in a single tree. The concept is that by training each tree on many samples, even though each tree may have a
+    large variance relative to a specific set of training data, the overall variance of the forest will be reduced without
+    increasing the bias.
+    • Random Subsets of features for splitting nodes:
+    The random forest’s second fundamental idea is that, while deciding whether to divide a node, each tree considers
+    only a portion of all the features. This may be done in Sklearn by setting max features = p
+    (n features) which means that if a node in a tree has 16 characteristics, only 4 random features will be taken into account when
+    splitting the node.
+    A Random Forest achieves low variance and low bias by merging predictions from multiple decision trees into a single
+    model, resulting in forecasts that are more accurate on average than predictions from individual decision trees.
+    
+  #### Light GBM
+  Gradient Boosting Decision Tree has a variant called Light GBM that is very effective. In terms of computation
+  speed and memory use, it can perform noticeably better than XGBoost and SGB. Gradient boosted decision trees are
+  implemented using the Light GBM framework. Because of Light GBM’s many benefits, including its quicker training
+  speed, good accuracy with default parameters, parallel and GPU learning, small memory footprint, and capacity to
+  handle huge datasets, we chose to employ it. In Light GBM, the train() technique is used to generate an estimator. It
+  accepts dictionary and training dataset as estimator parameter inputs. The estimator is then trained, and a returned
+  object of type Booster has a trained estimator that can be used to forecast the future.
 
-### Conclusion
-From the above results we could conclude that:
-1. Light GBM model trained on the under-sampled training data set gives the best performance.
-2. The most important features to determine the Attrition Rate among the customers of the bank are:
-  (a) Total Transaction Amount
-  (b) Total Transaction Count
-  (c) Total Amount Change Q4 to Q1
-  (d) Total Count Change Q4 to Q1
-  (e) Total Revolving Balance
-  (f) Average Utilization Ratio
-  (g) Total Relationship Count
-3. All the above features are negatively correlated to the target feature Attrition Flag, that is, the higher the values
-of the above features, the lower the chances of the customers getting churned.
-4. The bank must engage with their customers more frequently and increase the relationship count with each
-customer.
-5. Bank must come up with some offers or policies where they could decrease the inactivity of the Existing customers
-and promote the usage of their credit card services.
-
-### Future Scope
-1. The attrition rate is an extremely popular and widely researched problem statement in the industry. Each
-business in the industry wants to retain their customers and reduce Customer Acquisition costs to increase their
-profit margin.
-
-2. In our project, we used only 4 different Machine Learning algorithms to predict the customers’ Attrition rate
-namely: Logistic regression, Decision Tree Classifier, Random Forest Classifier, and Light GBM Classifiers. In
-the industry other classification algorithms like Neural network algorithms, genetic programming approaches
-using the AdaBoost model, and many other models have been utilized.
-3. We were provided with the data set for a few customers to train our model on; it would be more accurate and
-generalized if we supplied more data to the training model.
-4. We can use more sophisticated ensembling techniques by combining two or more base classifiers.
 
 ### References
 [1] Gustafsson, A., Johnson, M.D., Roos, I.: The effects of customer satisfaction, relationship commitment dimensions,
